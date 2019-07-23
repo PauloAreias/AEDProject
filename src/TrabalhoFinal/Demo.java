@@ -10,6 +10,8 @@ public class Demo {
 		llist.add(2);
 		llist.add(3);
 		
+		
+		
 		llist.print();
 		
 		//llist.add("ola");
@@ -18,12 +20,15 @@ public class Demo {
 		//llist.print();
 		
 		llist.delete(2);
+		
+		SortAndSearch.selectionSort(llist.head);
+		
 		System.out.println(" ");
 		llist.print();
 		
 		System.out.println(" ");
 		
-		boolean b1 = SortAndSearch.linearSearch2(llist.head,3);
+		boolean b1 = SortAndSearch.linearSearch2(llist.head,1);
 		
 		System.out.println(b1);
 	
