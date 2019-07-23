@@ -23,7 +23,9 @@ public class Demo {
 		
 		System.out.println(" ");
 		
-		System.out.println(llist.linearSearch2(llist.head,1));
+		boolean b1 = SortAndSearch.linearSearch2(llist.head,3);
+		
+		System.out.println(b1);
 	
 	}
 
