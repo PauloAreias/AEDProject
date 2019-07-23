@@ -6,6 +6,13 @@ public class Book implements Comparable<Book> {
     private String nomeautor;
     private String titulo;
     private int edicao;
+    
+    public Book() {
+        this.tipolivro = null;
+        this.nomeautor = null;
+        this.titulo = null;
+        this.edicao = 0;
+    }
 
     public Book(String tipliv, String nomaut, String tit, int edic) {
         this.tipolivro = tipliv;
@@ -48,7 +55,7 @@ public class Book implements Comparable<Book> {
 
     @Override
     public String toString() {
-        return "Book [Tipo de livro=" + tipolivro + ", Nome do Autor=" + nomeautor + ", Titulo=" + titulo + ", Edicao=" + edicao + "]";
+        return "Tipo de livro=" + tipolivro + ", Nome do Autor=" + nomeautor + ", Titulo=" + titulo + ", Edicao=" + edicao ;
     }
 
     @Override

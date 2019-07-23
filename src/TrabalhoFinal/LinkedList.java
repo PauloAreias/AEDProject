@@ -7,11 +7,6 @@ public class LinkedList<T> {
 
 	
 	
-	public LinkedList() {
-		head = null;
-		
-	}
-	
 
 	public void add(T newData) {
 		Node<T> newNode= new Node<T>(newData);
@@ -55,12 +50,12 @@ public class LinkedList<T> {
 	}
 	
 	public void print() {
-		Node<T> tnode=head;
+		Node tnode=head;
 		while (tnode !=null) {
-			System.out.print(tnode.element);
+			System.out.println(tnode.element);
 			tnode= tnode.next;
-			if(tnode !=null) {
-				System.out.print(" -> ");
+			if(tnode == null) {
+				System.out.println("  ");
 			}
 		}
 	}
