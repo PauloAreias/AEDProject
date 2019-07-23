@@ -2,7 +2,7 @@ package TrabalhoFinal;
 
 public class Biblioteca {
 	
-	private LinkedList<Books> Livros ;
+	private LinkedList<Book> Livros ;
 	int nLivros=0;
 	
 	public Biblioteca() {
