@@ -3,8 +3,6 @@ package TrabalhoFinal;
 
 public class LinkedList<T> {
     Node<T> head;
-    
-    
     public void add(T newData) {
         Node<T> newNode = new Node<T>(newData);
         if (head == null) {
@@ -15,9 +13,9 @@ public class LinkedList<T> {
         }
     }
 
-    void delete(T element) {
+   T delete( Node<T> head,T element) {
 		if (head==null) {
-			return ;
+			return null;
 		}
 		
 		Node<T> current=head;
@@ -29,26 +27,19 @@ public class LinkedList<T> {
 		}
 		
 		if (current==null) {
-			return ;
+			return null;
 		}
 		
 		if (current == head) {
 			head = current.getNext();
 			current.setNext(null);
-			
-			}
-		else if (current.getNext()==null){
+			}else if (current.getNext()==null){
 				previous.setNext(null);
-				
-			}
-		else 
-		{
+			}else {
 				previous.setNext(current.getNext());
 				current.setNext(null);
 			}
-		
-		//return current.getElement();
-		
+		return current.getElement();
 				
 			
 	}

@@ -17,24 +17,10 @@ public class Demo {
         System.out.print("Digite a opção pretendida: ");
     }
 
-    public static void Criar() {
-        LinkedList llist = new LinkedList();
-        Scanner read = new Scanner(System.in);
-        int n;
-        System.out.print("Nome do Livro: ");
-        n = read.nextInt();
-        llist.add(n);
-        SortAndSearch.selectionSort(llist.head);
-    }
 
-
-    public static void Pesquisar() {
-        //boolean b1 = SortAndSearch.linearSearch2(llist.head,1);
-        //System.out.println(b1);
-    }
 
     public static void main(String[] args) {
-        Biblioteca.Operacoes();
+        Menu.Operacoes();
 
     }
 }

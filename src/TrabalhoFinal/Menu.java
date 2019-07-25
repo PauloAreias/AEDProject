@@ -1,18 +1,12 @@
 package TrabalhoFinal;
 
 import static TrabalhoFinal.Demo.menu;
+
 import java.util.Scanner;
 
-public class Biblioteca {
-    private LinkedList<Book> Livros;
-    int nLivros = 0;
-
-    public Biblioteca() {
-        this.Livros = new LinkedList();
-        this.nLivros = 0;
-    }
-
-    public static void Operacoes() {
+public class Menu {
+	
+	public static void Operacoes() {
 
         int opc;
         LinkedList llist = new LinkedList();
@@ -150,3 +144,5 @@ public class Biblioteca {
     }
 
 }
+
+
