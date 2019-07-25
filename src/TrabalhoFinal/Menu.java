@@ -49,12 +49,9 @@ public class Menu {
 	public static void Operacoes() throws NotComparableException {
 
         int opc;
-        int i=0;
         LinkedList<Book> llist = new LinkedList<Book>();
         OrderedList olist = new OrderedList();
-        //Book Olivro = new Book();
         //Book livro = new Book();
-        
         
         int nLT = 0;
         int nLR = 0;
@@ -64,7 +61,7 @@ public class Menu {
         int x;
         do {
             menu();
-            SortAndSearch.selectionSort(llist.head);
+            SortAndSearch.selectionSort(olist.head);
             opc = read.nextInt();
             switch (opc) {
 
@@ -76,24 +73,22 @@ public class Menu {
              	        
              		   System.out.println(" ");
                         Scanner read1 = new Scanner(System.in);
-                        Book livro = new Book();
                         
                         
                         System.out.print("Tipo do Livro: ");
                         g = read1.nextLine();
-                        livro.setTipolivro(g);
+                        //livro.setTipolivro(g);
                         System.out.print("Nome do Autor: ");
                         no = read1.nextLine();
-                        livro.setNomeautor(no);
+                        //livro.setNomeautor(no);
                         System.out.print("Titulo do Livro: ");
                         t = read1.nextLine();
-                        livro.setTitulo(t);
+                        //livro.setTitulo(t);
                         System.out.print("Edicao do Livro: ");
                         e = read1.nextInt();
-                        livro.setEdicao(e);
+                        //livro.setEdicao(e);
                         
-                        
-                        //Book livro = new Book(g,no,t,e,0);
+                        Book livro = new Book(g,no, t, e,0);
                         
                         boolean b = SortAndSearch.linearSearch2(llist.head, livro);
              			 if (b== true) {
@@ -110,7 +105,7 @@ public class Menu {
                 	}else {
                 		llist.add(livro);
  		        		livro.setExemplares(1);
- 		                System.out.println("Livro :"+ livro.getTitulo() + " stock: " + livro.getExemplares());
+ 		                System.out.println("Livro "+ livro.getTitulo() + " stock: " + livro.getExemplares());
  		                nLT++;
  		               System.out.println(nLT);
                 	}

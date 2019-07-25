@@ -66,14 +66,19 @@ public class Book implements Comparable<Book> {
        ", Titulo=" + titulo + ", Edicao=" + edicao + ", Exemplares=" + exemplares ;
     }
 
-    
     @Override
     public int compareTo(Book other) {
         int result;
-        if (titulo.equals(((Book) other).titulo)) {
+        if (tipolivro.equals(((Book) other).tipolivro)) {
             result = nomeautor.compareTo(((Book) other).nomeautor);
+            if (result == 0) {
+                result = titulo.compareTo(((Book) other).titulo);
+                if (result == 0) {
+                    result = ((Integer) edicao).compareTo(((Integer) other.edicao));
+                }
+            }
         } else {
-            result = titulo.compareTo(((Book) other).titulo);
+            result = tipolivro.compareTo(((Book) other).tipolivro);
         }
         return result;
     }
