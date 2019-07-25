@@ -27,9 +27,6 @@ public class Demo {
         SortAndSearch.selectionSort(llist.head);
     }
 
-    public static void Delete() {
-
-    }
 
     public static void Pesquisar() {
         //boolean b1 = SortAndSearch.linearSearch2(llist.head,1);
@@ -37,7 +34,6 @@ public class Demo {
     }
 
     public static void main(String[] args) {
-
         Biblioteca.Operacoes();
 
     }

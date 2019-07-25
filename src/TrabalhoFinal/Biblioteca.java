@@ -16,6 +16,7 @@ public class Biblioteca {
 
         int opc;
         LinkedList llist = new LinkedList();
+        SortAndSearch.selectionSort(llist.head);
         Scanner read = new Scanner(System.in);
         String n;
         int x;
@@ -43,9 +44,23 @@ public class Biblioteca {
                     livro.setEdicao(x);
 
                     livro.setTitulo(n);
+                    
+                    boolean b = SortAndSearch.linearSearch2(llist.head, livro);
+                    if (b == true) {
+                    	
+                    	if (livro.quantidade >=10) {
+                            System.out.println("Maximo stock atingido do livro  "+ livro.getTitulo());
+                    		
+                    	}else {
+                    		llist.add(livro);
+                            System.out.println("Livro "+ livro.getTitulo() + "adicionado");
+                    	}
+                        
+                    } else {
+                    	llist.add(livro);
+                        System.out.println("Livro "+ livro.getTitulo() + "adicionado");
+                    }
 
-                    llist.add(livro);
-                    SortAndSearch.selectionSort(llist.head);
 
                     //Criar();
                     break;
@@ -69,8 +84,8 @@ public class Biblioteca {
                     x = read2.nextInt();
                     livro2.setEdicao(x);
 
-                    boolean b = SortAndSearch.linearSearch2(llist.head, livro2);
-                    if (b == true) {
+                    boolean b1 = SortAndSearch.linearSearch2(llist.head, livro2);
+                    if (b1 == true) {
                         System.out.println(livro2.getTitulo() + " Requisitado");
                         llist.delete(livro2);
                     } else {
