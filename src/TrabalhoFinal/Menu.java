@@ -116,7 +116,7 @@ public class Menu {
                     boolean b2 = SortAndSearch.linearSearch2(llist.head, livro3);
 
                     if (b2 == true) {
-                        System.out.println(" Existem xs exmplares do Livro " + livro3.getTitulo());
+                        System.out.println(" Existem " + livro3.exemplares + " exmplares do Livro " + livro3.getTitulo());
                     } else {
                         System.out.println("Livro não encontrado");
                     }
