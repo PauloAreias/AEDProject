@@ -3,7 +3,7 @@ package TrabalhoFinal;
 
 public class LinkedList<T> {
     Node<T> head;
-    public void add(T newData) {
+    public void add(T newData) throws NotComparableException {
         Node<T> newNode = new Node<T>(newData);
         if (head == null) {
             head = newNode;
@@ -13,7 +13,7 @@ public class LinkedList<T> {
         }
     }
 
-   T delete( Node<T> head,T element) {
+   T delete(T element ) {
 		if (head==null) {
 			return null;
 		}
